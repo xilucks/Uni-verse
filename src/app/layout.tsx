@@ -1,6 +1,5 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import TestComponent from "@/app/components/tc";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -8,6 +7,7 @@ export const metadata = {
   title: 'Uni-Verse',
   authors: "siun0331@naver.com",
   description: '프론트엔드 개발자 Uni가 아무렇게나 떠드는 공간',
+  icons: '/favicon.ico',
 }
 
 export default function RootLayout({
@@ -17,10 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
-      <div>test</div>
-      <TestComponent />
-      {children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
