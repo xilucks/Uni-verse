@@ -2,7 +2,9 @@
   "name": "uni-log",
   "packageManager": "yarn@3.2.4",
   "dependencies": {
+    "daisyui": "^2.51.6",
     "next": "^13.4.3",
+    "next-mdx-remote": "^4.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
