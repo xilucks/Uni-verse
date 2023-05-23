@@ -7,11 +7,11 @@ export default function Header(){
 
     return(
         <header className={'w-full h-14 flex align-middle items-center'}>
-            <div className={'mx-8 font-bold'}>
+            <div className={'mx-8 font-bold text-xl'}>
                 <Link href={"/"}>Uni-verse</Link>
             </div>
             <nav className={"h-full justify-between space-x-3"}>
-                <ul className={"h-full flex items-center justify-between space-x-3"}>
+                <ul className={"h-full flex items-center justify-between space-x-8"}>
                     <li className={`${
                         pathName.includes('/post') ? 'font-bold' : ''
                     } md:text-base transition`}>
