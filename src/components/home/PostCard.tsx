@@ -6,7 +6,7 @@ import clockIcon from "../../../public/icons/clock.svg"
 
 export interface PostCardProps {
     title: string,
-    subTitle: string,
+    description: string,
     imgSrc: string,
     imgAlt: string,
     tags: string[],
@@ -22,7 +22,7 @@ export default function PostCard(props: PostCardProps){
             <div className={'card-body h-3/6 pb-2 px-4'}>
                 <h3 className={'card-title'}>{props.title}</h3>
                 <div className={'h-24 w-full'}>
-                    <p>{props.subTitle}</p>
+                    <p>{props.description}</p>
                 </div>
                 <div className="card-actions justify-end">
                     {props.tags.map((tag) => {
