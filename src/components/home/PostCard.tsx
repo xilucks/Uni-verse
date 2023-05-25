@@ -19,7 +19,7 @@ export default function PostCard(props: PostCardProps){
             <figure className={"h-fit w-full"}>
                 <Image src={props.imgSrc} alt={props.imgAlt} width={400} height={200} className={"flex items-center justify-center"}/>
             </figure>
-            <div className={'card-body h-3/6 pb-2'}>
+            <div className={'card-body h-3/6 pb-2 px-4'}>
                 <h3 className={'card-title'}>{props.title}</h3>
                 <div className={'h-24 w-full'}>
                     <p>{props.subTitle}</p>
@@ -33,9 +33,9 @@ export default function PostCard(props: PostCardProps){
                         );
                     })}
                 </div>
-                <div className={'w-full text-right flex align-middle'}>
-                    <Image className={""} src={clockIcon} alt={'시계 아이콘'} width={15} height={15}/>
-                     <p className={'text-sm'}>{dayjs(props.createTime).format("YYYY-MM-DD")}</p>
+                <div className={'w-full text-right flex align-middle flex flex-row-reverse'}>
+                     <span className={'text-sm w-fit'}>{dayjs(props.createTime).format("YYYY-MM-DD")}</span>
+                    <Image className={"fill-white mr-2"} src={clockIcon} alt={'시계 아이콘'} width={15} height={15}/>
                 </div>
             </div>
         </article>

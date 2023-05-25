@@ -42,6 +42,13 @@ const config: StorybookConfig = {
       },
     },
   },
+  webpackFinal: async config => {
+    config.module.rules.unshift({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
   docs: {
     autodocs: "tag",
   },

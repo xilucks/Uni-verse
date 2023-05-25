@@ -3,6 +3,7 @@
   "packageManager": "yarn@3.2.4",
   "dependencies": {
     "@storybook/addon-styling": "^1.0.8",
+    "@svgr/webpack": "^8.0.1",
     "daisyui": "^2.51.6",
     "dayjs": "^1.11.7",
     "next": "^13.4.3",
