@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import dayjs from "dayjs";
-import clockIcon from "../../../public/icons/clock.svg"
 
 export interface PostCardProps {
     title: string,
@@ -15,7 +14,7 @@ export interface PostCardProps {
 
 export default function PostCard(props: PostCardProps){
     return(
-        <article className={'card w-full max-w-xs h-96 bg-base-100 text-left hover:shadow-lg dark:hover:shadow-black/30 hover:scale-105'}>
+        <article className={'card w-72 max-w-[280px] h-80 bg-base-100 text-left hover:shadow-lg dark:hover:shadow-black/30 hover:scale-105 mx-auto sm:m-0'}>
             <figure className={"h-fit w-full"}>
                 <Image src={props.imgSrc} alt={props.imgAlt} width={400} height={200} className={"flex items-center justify-center"}/>
             </figure>
@@ -35,7 +34,7 @@ export default function PostCard(props: PostCardProps){
                 </div>
                 <div className={'w-full text-right flex align-middle flex flex-row-reverse'}>
                      <span className={'text-sm w-fit'}>{dayjs(props.createTime).format("YYYY-MM-DD")}</span>
-                    <Image className={"fill-white mr-2"} src={clockIcon} alt={'시계 아이콘'} width={15} height={15}/>
+                    <Image className={"fill-white mr-2"} src={"/icons/clock.svg"} alt={'시계 아이콘'} width={15} height={15}/>
                 </div>
             </div>
         </article>
