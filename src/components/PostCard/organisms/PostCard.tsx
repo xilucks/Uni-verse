@@ -18,12 +18,12 @@ export interface PostCardProps {
 
 export default function PostCard(props: PostCardProps) {
   return (
-    <Link href={`/post/${props.slug}`} passHref>
-      <article
-        className={
-          "card w-72 max-w-[280px] h-80 bg-base-100 text-left hover:shadow-lg dark:hover:shadow-black/30 hover:scale-105 mx-auto sm:m-0"
-        }
-      >
+    <article
+      className={
+        "card w-72 max-w-[280px] h-80 bg-base-100 text-left hover:shadow-lg dark:hover:shadow-black/30 hover:scale-105 mx-auto sm:m-0 mt-80 overflow-hidden"
+      }
+    >
+      <Link className={"w-full h-full"} href={`/post/${props.slug}`} passHref>
         <ImageContainer
           imgSrc={props.imgSrc}
           imgAlt={props.imgAlt}
@@ -38,7 +38,7 @@ export default function PostCard(props: PostCardProps) {
           />
           <TimeMolecules createTime={props.createTime} />
         </div>
-      </article>
-    </Link>
+      </Link>
+    </article>
   );
 }

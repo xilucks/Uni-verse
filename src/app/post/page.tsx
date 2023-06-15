@@ -13,7 +13,7 @@ export function getSortedPostList() {
 export default function PageHome() {
   const postList = getSortedPostList();
   return (
-    <div className={"text-center w-full"}>
+    <div className={"text-center w-full h-screen"}>
       {postList.map((post: PostCardProps) => {
         return (
           <PostCard
